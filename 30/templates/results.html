@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Result for idx {{ request.args.photo_id }} </h2>
+    <img src="{{ url_for('show_img', photo_id=photo_id) }}"
+       alt="sample {{ photo_id }}" style="max-width: 300px; height:auto;">
+    <pre>{{ data | tojson(indent=2) }}</pre>
+    <a href="/"> Go back</a>
+</body>
+</html>
